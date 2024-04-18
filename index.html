@@ -8,53 +8,52 @@
     <link href="styles.css" rel="stylesheet">
 </head>
 <body>
+
     
-<!-- MultiStep Form -->
-<div class="row">
-    <div class="col-md-6 col-md-offset-3">
-        <form id="msform">
-            <!-- progressbar -->
-            <ul id="progressbar">
-                <li class="active">Personal Details</li>
-                <li>Social Profiles</li>
-                <li>Account Setup</li>
-            </ul>
-            <!-- fieldsets -->
-            <fieldset>
-                <h2 class="fs-title">Personal Details</h2>
-                <h3 class="fs-subtitle">Tell us something more about you</h3>
-                <input type="text" name="fname" placeholder="First Name"/>
-                <input type="text" name="lname" placeholder="Last Name"/>
-                <input type="text" name="phone" placeholder="Phone"/>
-                <input type="button" name="next" class="next action-button" value="Next"/>
-            </fieldset>
-            <fieldset>
-                <h2 class="fs-title">Social Profiles</h2>
-                <h3 class="fs-subtitle">Your presence on the social network</h3>
-                <input type="text" name="twitter" placeholder="Twitter"/>
-                <input type="text" name="facebook" placeholder="Facebook"/>
-                <input type="text" name="gplus" placeholder="Google Plus"/>
-                <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
-                <input type="button" name="next" class="next action-button" value="Next"/>
-            </fieldset>
-            <fieldset>
-                <h2 class="fs-title">Create your account</h2>
-                <h3 class="fs-subtitle">Fill in your credentials</h3>
-                <input type="text" name="email" placeholder="Email"/>
-                <input type="password" name="pass" placeholder="Password"/>
-                <input type="password" name="cpass" placeholder="Confirm Password"/>
-                <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
-                <input type="submit" name="submit" class="submit action-button" value="Submit"/>
-            </fieldset>
-        </form>
-        <!-- link to designify.me code snippets -->
-        <div class="dme_link">
-            <p><a href="http://designify.me/code-snippets-js/" target="_blank">More Code Snippets</a></p>
-        </div>
-        <!-- /.link to designify.me code snippets -->
+<div id="container" class="container mt-5">
+  <div class="progress px-1" style="height: 3px;">
+    <div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+  </div>
+  <div class="step-container d-flex justify-content-between">
+    <div class="step-circle" onclick="displayStep(1)">1</div>
+    <div class="step-circle" onclick="displayStep(2)">2</div>
+    <div class="step-circle" onclick="displayStep(3)">3</div>
+  </div>
+
+  <form id="multi-step-form">
+    <div class="step step-1">
+      <!-- Step 1 form fields here -->
+      <h3>Step 1</h3>
+      <div class="mb-3">
+        <label for="field1" class="form-label">Field 1:</label>
+        <input type="text" class="form-control" id="field1" name="field1">
+      </div>
+      <button type="button" class="btn btn-primary next-step">Next</button>
     </div>
+
+    <div class="step step-2">
+      <!-- Step 2 form fields here -->
+      <h3>Step 2</h3>
+      <div class="mb-3">
+        <label for="field2" class="form-label">Field 2:</label>
+        <input type="text" class="form-control" id="field2" name="field2">
+      </div>
+      <button type="button" class="btn btn-primary prev-step">Previous</button>
+      <button type="button" class="btn btn-primary next-step">Next</button>
+    </div>
+
+    <div class="step step-3">
+      <!-- Step 3 form fields here -->
+      <h3>Step 3</h3>
+      <div class="mb-3">
+        <label for="field3" class="form-label">Field 3:</label>
+        <input type="text" class="form-control" id="field3" name="field3">
+      </div>
+      <button type="button" class="btn btn-primary prev-step">Previous</button>
+      <button type="submit" class="btn btn-success">Submit</button>
+    </div>
+  </form>
 </div>
-<!-- /.MultiStep Form -->
 
     
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
