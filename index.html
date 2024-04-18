@@ -24,10 +24,22 @@
     <div class="step step-1">
       <!-- Step 1 form fields here -->
       <h3>Step 1</h3>
-      <div class="mb-3">
-        <label for="field1" class="form-label">Field 1:</label>
-        <input type="text" class="form-control" id="field1" name="field1">
-      </div>
+
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="question text-center mb-4">
+                        <h2>해당하는 것을 모두 선택하세요</h2> <!-- This is Korean for "Please select all that apply." -->
+                    </div>
+                    <div class="answers">
+                        <button type="button" class="btn btn-outline-primary btn-lg d-block mb-3 w-100">혈압이 높아요<br><small>140 / 90 이상</small></button> <!-- "Blood pressure is high 140 / 90 or more" -->
+                        <button type="button" class="btn btn-outline-primary btn-lg d-block mb-3 w-100">혈압이 낮아요<br><small>90 / 60 이하</small></button> <!-- "Blood pressure is low 90 / 60 or less" -->
+                        <button type="button" class="btn btn-outline-primary btn-lg d-block mb-3 w-100">평소 단위를 타고, 담배를 많이 피워요</button> <!-- "Usually rides a bicycle, and smokes a lot" -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
       <button type="button" class="btn btn-primary next-step">Next</button>
     </div>
 
