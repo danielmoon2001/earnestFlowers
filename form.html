@@ -5,15 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flower Delivery Preferences</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .form-section { display: none; }
+        .form-section.active { display: block; }
+        .centered-form { 
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
 <div class="container mt-5">
-    <h2 class="mb-3">Flower Delivery Preferences</h2>
-    <div id="flowerPreferencesForm">
+    <div id="flowerPreferencesForm" class="centered-form">
         <!-- Step 1: Occasion -->
-        <div class="mb-3">
+        <div class="form-section active" id="step1">
             <label for="occasion" class="form-label">Select Occasion</label>
-            <select class="form-select" id="occasion">
+            <select class="form-select" id="occasion" onchange="showNextStep('step1', 'step2')">
                 <option selected>Choose...</option>
                 <option value="Birthday">Birthday</option>
                 <option value="Anniversary">Anniversary</option>
@@ -22,9 +32,9 @@
         </div>
 
         <!-- Step 2: Favorite Color -->
-        <div class="mb-3">
+        <div class="form-section" id="step2">
             <label for="color" class="form-label">Favorite Color</label>
-            <select class="form-select" id="color">
+            <select class="form-select" id="color" onchange="showNextStep('step2', 'step3')">
                 <option selected>Choose...</option>
                 <option value="Red">Red</option>
                 <option value="Yellow">Yellow</option>
@@ -33,30 +43,36 @@
         </div>
 
         <!-- Step 3: Delivery Date -->
-        <div class="mb-3">
+        <div class="form-section" id="step3">
             <label for="date" class="form-label">Delivery Date</label>
-            <input type="date" class="form-control" id="date">
+            <input type="date" class="form-control" id="date" onchange="showNextStep('step3', 'result')">
         </div>
 
-        <!-- Submit Button -->
-        <button type="button" class="btn btn-primary" onclick="showRecommendation()">Get Recommendation</button>
-    </div>
-
-    <!-- Result Section -->
-    <div id="result" class="mt-4" style="display:none;">
-        <h4>Flower Recommendation</h4>
-        <p id="recommendationText"></p>
+        <!-- Result Section -->
+        <div id="result" class="mt-4" style="display:none;">
+            <h4>Flower Recommendation</h4>
+            <p id="recommendationText"></p>
+        </div>
     </div>
 </div>
 
 <script>
-    function showRecommendation() {
+    function showNextStep(currentStep, nextStep) {
+        document.getElementById(currentStep).classList.remove('active');
+        document.getElementById(nextStep).classList.add('active');
+
+        if (nextStep === 'result') {
+            displayResult();
+        }
+    }
+
+    function displayResult() {
         const occasion = document.getElementById('occasion').value;
         const color = document.getElementById('color').value;
         const date = document.getElementById('date').value;
 
-        let recommendation = 'Based on your choices of ' + occasion + ', ' + color + ' color, and delivery by ' + date;
-        recommendation += ', we recommend our premium bouquet to make your event special.';
+        let recommendation = `Based on your choices of ${occasion}, ${color} color, and delivery by ${date}, `;
+        recommendation += 'we recommend our premium bouquet to make your event special.';
 
         document.getElementById('recommendationText').textContent = recommendation;
         document.getElementById('result').style.display = 'block';
