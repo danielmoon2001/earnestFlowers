@@ -13,7 +13,7 @@ function displayStep(stepNumber) {
   $(document).ready(function() {
     $('#multi-step-form').find('.step').slice(1).hide();
   
-    $(".next-step").click(function() {
+    $(".next-step, .answer-btn").click(function() {
       if (currentStep < 3) {
         $(".step-" + currentStep).addClass("animate__animated animate__fadeOutLeft");
         currentStep++;
