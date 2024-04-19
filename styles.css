@@ -21,6 +21,7 @@
   justify-content: center;
   margin-bottom: 10px;
   cursor: pointer; /* Added cursor pointer */
+  color: #006400; /* Text color for numbers inside circles */
 }
 
 .step-line {
@@ -35,4 +36,31 @@
 
 #multi-step-form{
   overflow-x: hidden;
+} 
+
+/* Override Bootstrap button styles */
+.btn-outline-primary {
+  color: #006400;
+  border-color: #006400;
+}
+
+.btn-outline-primary:hover {
+  color: #fff;
+  background-color: #006400;
+  border-color: #006400;
+}
+
+.btn-primary {
+  background-color: #006400;
+  border-color: #006400;
+}
+
+.btn-primary:hover {
+  background-color: #004d00; /* A slightly darker green for hover */
+  border-color: #004d00;
+}
+
+/* Progress bar color */
+.progress-bar {
+  background-color: #006400;
 }
