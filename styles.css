@@ -64,3 +64,15 @@
 .progress-bar {
   background-color: #006400;
 }
+
+/* Maintain the outline style but change the background for the second button */
+.btn-outline-primary.btn-main-page {
+  background-color: #e6ffe6; /* A light green shade */
+  border-color: #004d00; /* Keeping the green theme */
+  color: #004d00; /* Dark green text color */
+}
+
+.btn-outline-primary.btn-main-page:hover {
+  background-color: #ccebcc; /* A slightly darker shade for hover */
+  color: #003300; /* Darker green text on hover */
+}
