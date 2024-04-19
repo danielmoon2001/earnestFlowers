@@ -36,8 +36,3 @@
 #multi-step-form{
   overflow-x: hidden;
 }
-
-.dme_link a:hover, .dme_link a:focus {
-    background: #C5C5F1;
-    text-decoration: none;
-}
