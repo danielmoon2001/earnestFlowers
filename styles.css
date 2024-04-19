@@ -61,6 +61,14 @@ body {
   border-color: #006400;
 }
 
+.btn-outline-primary:active,
+.btn-outline-primary.active {
+    color: #fff;
+    background-color: #004d00;
+    border-color: #004d00;
+    box-shadow: none;
+}
+
 .btn-primary {
   background-color: #006400;
   border-color: #006400;
@@ -69,6 +77,13 @@ body {
 .btn-primary:hover {
   background-color: #004d00;
   border-color: #004d00;
+}
+
+.btn-primary:active,
+.btn-primary.active {
+    background-color: #003300;
+    border-color: #002200;
+    box-shadow: none;
 }
 
 .progress-bar {
@@ -84,4 +99,11 @@ body {
 .btn-outline-primary.btn-main-page:hover {
   background-color: #ccebcc;
   color: #003300;
+}
+
+.btn-outline-primary.btn-main-page:active,
+.btn-outline-primary.btn-main-page.active {
+    background-color: #004d00;
+    color: #fff;
+    border-color: #003300;
 }
