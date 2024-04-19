@@ -1,19 +1,21 @@
 body {
-  background-image: url('https://i.pinimg.com/originals/b8/cd/76/b8cd76124f26c8c87ca3aff23e36823e.jpg'); /* Replace 'your-image-url.jpg' with your actual image URL */
-  background-size: cover; /* Cover the entire page */
-  background-position: center; /* Center the background image */
-  background-repeat: no-repeat; /* Do not repeat the image */
+  background-image: url('https://i.pinimg.com/originals/b8/cd/76/b8cd76124f26c8c87ca3aff23e36823e.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0; /* Ensure no default margin */
 }
 
 #multi-step-form {
   overflow-x: hidden;
-  background-color: rgba(255, 255, 255, 0.8);  /* White with 80% opacity */
+  background-color: rgba(255, 255, 255, 0.8);
   padding: 20px;
   border-radius: 8px;
 }
 
 #container {
-  max-width: 550px;  
+  max-width: 550px;
+  margin: auto; /* Center the container */
 }
 
 .step-container {
@@ -34,8 +36,8 @@ body {
   align-items: center;
   justify-content: center;
   margin-bottom: 10px;
-  cursor: pointer; /* Added cursor pointer */
-  color: #006400; /* Text color for numbers inside circles */
+  cursor: pointer;
+  color: #006400;
 }
 
 .step-line {
@@ -48,7 +50,6 @@ body {
   z-index: -1;
 }
 
-/* Override Bootstrap button styles */
 .btn-outline-primary {
   color: #006400;
   border-color: #006400;
@@ -66,23 +67,21 @@ body {
 }
 
 .btn-primary:hover {
-  background-color: #004d00; /* A slightly darker green for hover */
+  background-color: #004d00;
   border-color: #004d00;
 }
 
-/* Progress bar color */
 .progress-bar {
   background-color: #006400;
 }
 
-/* Maintain the outline style but change the background for the second button */
 .btn-outline-primary.btn-main-page {
-  background-color: #e6ffe6; /* A light green shade */
-  border-color: #004d00; /* Keeping the green theme */
-  color: #004d00; /* Dark green text color */
+  background-color: #e6ffe6;
+  border-color: #004d00;
+  color: #004d00;
 }
 
 .btn-outline-primary.btn-main-page:hover {
-  background-color: #ccebcc; /* A slightly darker shade for hover */
-  color: #003300; /* Darker green text on hover */
+  background-color: #ccebcc;
+  color: #003300;
 }
